@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js 模块化</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #111; }
+    </style>
+</head>
+<body>
+    <!-- 👇👇👇 新增：屏幕中心的准星 -->
+    <div id="crosshair" style="position: fixed; top: 50%; left: 50%; width: 6px; height: 6px; background: rgba(255,255,255,0.8); border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 100;"></div>
+    
+    
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.160.0",
+    "three/addons/": "https://esm.sh/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<!-- 👇 现在整个网页只引入这个入口文件 -->
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
